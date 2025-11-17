@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cool Duo Intro</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #242424, #0a0a0a);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      animation: fadeBG 10s infinite alternate ease-in-out;
+    }
+
+    @keyframes fadeBG {
+      0% { background: radial-gradient(circle at top, #202020, #000); }
+      100% { background: radial-gradient(circle at bottom, #181818, #000); }
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      padding: 50px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 30px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      animation: slideUp 1.2s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      width: 280px;
+      padding: 30px 25px;
+      border-radius: 25px;
+      text-align: center;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -80%;
+      left: -80%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+      filter: blur(50px);
+      animation: rotateGlow 12s linear infinite;
+    }
+
+    @keyframes rotateGlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .card:hover {
+      transform: scale(1.08);
+      box-shadow: 0px 20px 50px rgba(255, 255, 255, 0.3);
+    }
+
+    .black {
+      background: rgba(0, 255, 55, 0.25);
+      border: 2px solid rgba(0, 255, 55, 0.7);
+    }
+
+    .femboy {
+      background: rgba(0, 255, 200, 0.25);
+      border: 2px solid rgba(0, 255, 200, 0.7);
+    }
+
+    .pfp {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid white;
+      box-shadow: 0 0 15px rgba(255,255,255,0.4);
+      transition: 0.3s;
+    }
+
+    .card:hover .pfp {
+      transform: scale(1.12) rotate(3deg);
+    }
+
+    h2 { font-size: 1.5rem; font-weight: 600; margin: 12px 0; }
+    p { margin: 4px 0; opacity: 0.9; font-weight: 300; }
+    b { font-weight: 600; }
+
+    .tagline {
+      margin-top: 8px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      font-style: italic;
+    }
+
+    .floating-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: white;
+      opacity: 0.15;
+      filter: blur(3px);
+      border-radius: 50%;
+      animation: floatUp 8s linear infinite;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(120vh) scale(0.6); }
+      to { transform: translateY(-20vh) scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-stars"></div>
+
+  <div class="floating-shapes">
+    <div class="shape" style="left:10%; animation-delay:0s;"></div>
+    <div class="shape" style="left:25%; width:20px;height:20px; animation-delay:2s;"></div>
+    <div class="shape" style="left:40%; animation-delay:1s;"></div>
+    <div class="shape" style="left:55%; width:18px;height:18px; animation-delay:3s;"></div>
+    <div class="shape" style="left:70%; animation-delay:4s;"></div>
+    <div class="shape" style="left:85%; width:22px;height:22px; animation-delay:1.5s;"></div>
+  </div>
+
+  <div class="container">
+
+    <!-- Black Guy -->
+    <div class="card black">
+      <img class="pfp" src="job.jpg" alt="Guy pfp" />
+      <h2>Thanachai</h2>
+      <p><b>อายุ:</b> 2</p>
+      <p><b>เบอร์โทร:</b> 089-555-2341</p>
+      <p><b>งานอดิเรก:</b> ฟุตบอล, ทำอาหาร, เล่นเกม</p>
+      <p><b>นิสัย:</b> สุขุม, เป็นกันเอง, ไว้ใจได้</p>
+      <p><b>เกี่ยวกับ:</b> ผู้ชายธรรมดาที่ชอบวันเงียบ ๆ และอาหารอร่อย</p>
+    </div>
+
+    <!-- Femboy -->
+    <div class="card femboy">
+      <img class="pfp" src="sleep.jpg" alt="Girl pfp" />
+      <h2>Natnicha</h2>
+      <p><b>อายุ:</b> 666</p>
+      <p><b>เบอร์โทร:</b> 666-777-6666</p>
+      <p><b>งานอดิเรก:</b> วาดรูป, ฟังเพลง, อ่านหนังสือ</p>
+      <p><b>นิสัย:</b> ตูดจ๋อบ, เขินง่าย, คิดลึก</p>
+      <p><b>เกี่ยวกับ:</b> ผู้หญิงธรรมดาที่ชอบกิจกรรมเงียบ ๆ และบรรยากาศอบอุ่น</p>
+    </div>
+
+  </div>
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const container = document.querySelector('.container');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => {
+          if (c !== card) {
+            c.style.display = 'none';
+          }
+        });
+        card.style.transform = 'scale(1.2)';
+        card.style.zIndex = '10';
+
+        const exitBtn = document.createElement('div');
+        exitBtn.textContent = '✦ BACK ✦';
+        exitBtn.style.position = 'absolute';
+        exitBtn.style.top = '20px';
+        exitBtn.style.right = '20px';
+        exitBtn.style.padding = '8px 15px';
+        exitBtn.style.border = '2px solid white';
+        exitBtn.style.borderRadius = '10px';
+        exitBtn.style.cursor = 'pointer';
+        exitBtn.style.fontSize = '0.9rem';
+        exitBtn.style.background = 'rgba(0,0,0,0.4)';
+        exitBtn.style.backdropFilter = 'blur(5px)';
+        exitBtn.style.boxShadow = '0 0 10px rgba(255,255,255,0.4)';
+
+        card.appendChild(exitBtn);
+
+        exitBtn.onclick = (e) => {
+          e.stopPropagation();
+          exitBtn.remove();
+          cards.forEach(c => {
+            c.style.display = 'block';
+            c.style.transform = 'scale(1)';
+            c.style.zIndex = '1';
+          });
+        };
+      });
+    });
+  </script>
+</body>
+</html>
